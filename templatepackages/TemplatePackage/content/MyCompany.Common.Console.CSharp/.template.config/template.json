@@ -16,6 +16,13 @@
   "sourceName": "Company.ConsoleApplication1",
   "preferNameDirectory": true,
   "symbols": {
+    "TargetFrameworkOverride": {
+      "type": "parameter",
+      "description": "Overrides the target framework",
+      "replaces": "TargetFrameworkOverride",
+      "datatype": "string",
+      "defaultValue": ""
+    },
     "Framework": {
       "type": "parameter",
       "description": "The target framework for the project.",
@@ -24,10 +31,18 @@
         {
           "choice": "netcoreapp3.0",
           "description": "Target netcoreapp3.0"
+        },
+        {
+          "choice": "netcoreapp3.1",
+          "description": "Target netcoreapp3.1"
+        },
+        {
+          "choice": "net5.0",
+          "description": "Target net5.0"
         }
       ],
-      "replaces": "netcoreapp3.0",
-      "defaultValue": "netcoreapp3.0"
+      "replaces": "FrameworkParameter",
+      "defaultValue": "net5.0"
     },
     "langVersion": {
       "type": "parameter",
